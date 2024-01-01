@@ -17,7 +17,7 @@ namespace TDDTest.Tests
         [TestMethod]
         public void 平均値を取得できる()
         {
-            var list = new List<int> { 1, 2, 3, 4 , 5 };
+            var list = new List<int> { 1, 2, 3, 4, 5 };
             var result = TDD.UI.Calculation.Ave(list);
             Assert.AreEqual(3, result);
         }

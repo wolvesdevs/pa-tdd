@@ -12,7 +12,14 @@ namespace TDD.UI
 
         public static int Ave(List<int> list)
         {
-            throw new NotImplementedException();
+            int values = 0;
+
+            foreach (var val in list)
+            {
+                values += val;
+            }
+
+            return values / list.Count;
         }
     }
 }
