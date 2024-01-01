@@ -15,6 +15,15 @@ namespace TDD.UI
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void CalculationButton_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(ATextBox.Text);
+            int b = Convert.ToInt32(BTextBox.Text);
+
+            ResultLabel.Text = Calculation.Sum(a, b).ToString();
         }
     }
 }
