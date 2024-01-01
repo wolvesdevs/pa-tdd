@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ATextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
@@ -43,12 +43,12 @@
             this.ATextBox.Size = new System.Drawing.Size(100, 25);
             this.ATextBox.TabIndex = 0;
             // 
-            // textBox2
+            // BTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 1;
+            this.BTextBox.Location = new System.Drawing.Point(184, 50);
+            this.BTextBox.Name = "BTextBox";
+            this.BTextBox.Size = new System.Drawing.Size(100, 25);
+            this.BTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -87,7 +87,7 @@
             this.CalculationButton.UseVisualStyleBackColor = true;
             this.CalculationButton.Click += new System.EventHandler(this.CalculationButton_Click);
             // 
-            // Form1
+            // Form1View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,9 +96,9 @@
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.BTextBox);
             this.Controls.Add(this.ATextBox);
-            this.Name = "Form1";
+            this.Name = "Form1View";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox ATextBox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox BTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ResultLabel;

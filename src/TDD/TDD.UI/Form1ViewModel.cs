@@ -4,9 +4,9 @@
     {
         //private System.Windows.Forms.Button CalculationButton;
 
-        public string ATextBoxText { get; set; }
-        public string BTextBoxText { get; set; }
-        public string ResultLabelText { get; set; }
+        public string ATextBoxText { get; set; } = string.Empty;
+        public string BTextBoxText { get; set; } = string.Empty;
+        public string ResultLabelText { get; set; } = string.Empty;
 
     }
 }
