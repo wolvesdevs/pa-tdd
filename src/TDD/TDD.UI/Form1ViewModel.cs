@@ -5,8 +5,6 @@ namespace TDD.UI
 {
     public sealed class Form1ViewModel : INotifyPropertyChanged
     {
-        //private System.Windows.Forms.Button CalculationButton;
-
         private string _aTextBoxText = string.Empty;
         public string ATextBoxText
         {
