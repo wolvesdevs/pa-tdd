@@ -17,7 +17,7 @@ namespace TDD.UI
                 }
 
                 _aTextBoxText = value;
-                OnPropertyChanged("ATextBoxText");
+                OnPropertyChanged(nameof(ATextBoxText));
             }
         }
 
@@ -33,7 +33,7 @@ namespace TDD.UI
                 }
 
                 _bTextBoxText = value;
-                OnPropertyChanged("BTextBoxText");
+                OnPropertyChanged(nameof(BTextBoxText));
             }
         }
 
@@ -49,7 +49,7 @@ namespace TDD.UI
                 }
 
                 _resultLabelText = value;
-                OnPropertyChanged("ResultLabelText");
+                OnPropertyChanged(nameof(ResultLabelText));
             }
         }
 
@@ -68,7 +68,8 @@ namespace TDD.UI
             int a = Convert.ToInt32(ATextBoxText);
             int b = Convert.ToInt32(BTextBoxText);
 
-            ResultLabelText = Calculation.Sum(a, b).ToString();
+            int dbValue = DB.GetDBValue();
+            ResultLabelText = (Calculation.Sum(a, b) + dbValue).ToString();
         }
     }
 }
