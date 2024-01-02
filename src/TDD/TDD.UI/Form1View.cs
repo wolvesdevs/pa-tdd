@@ -18,6 +18,10 @@ namespace TDD.UI
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+            ATextBox.DataBindings.Add("Text", _viewModel, "ATextBoxText");
+            BTextBox.DataBindings.Add("Text", _viewModel, "BTextBoxText");
+            ResultLabel.DataBindings.Add("Text", _viewModel, "ResultLabelText");
         }
 
         private void CalculationButton_Click(object sender, EventArgs e)
