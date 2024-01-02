@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using System;
 using TDD.UI;
 
@@ -10,7 +11,10 @@ namespace TDDTest.Tests
         [TestMethod]
         public void シナリオ()
         {
-            var viewModel = new Form1ViewModel(new DBMock());
+            var mock = new Mock<IDB>();
+            mock.Setup(x => x.GetDBValue()).Returns(100);
+
+            var viewModel = new Form1ViewModel(mock.Object);
 
             Assert.AreEqual("", viewModel.ATextBoxText);
             Assert.AreEqual("", viewModel.BTextBoxText);
@@ -21,14 +25,6 @@ namespace TDDTest.Tests
             viewModel.CalculationAction();
 
             Assert.AreEqual("107", viewModel.ResultLabelText);
-        }
-    }
-
-    internal class DBMock : IDB
-    {
-        public int GetDBValue()
-        {
-            return 100;
         }
     }
 }
