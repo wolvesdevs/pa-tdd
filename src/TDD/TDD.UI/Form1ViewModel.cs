@@ -1,4 +1,6 @@
-﻿namespace TDD.UI
+﻿using System;
+
+namespace TDD.UI
 {
     public sealed class Form1ViewModel
     {
@@ -8,5 +10,12 @@
         public string BTextBoxText { get; set; } = string.Empty;
         public string ResultLabelText { get; set; } = string.Empty;
 
+        public void CalculationAction()
+        {
+            int a = Convert.ToInt32(ATextBoxText);
+            int b = Convert.ToInt32(BTextBoxText);
+
+            ResultLabelText = Calculation.Sum(a, b).ToString();
+        }
     }
 }
