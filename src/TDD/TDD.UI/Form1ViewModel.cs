@@ -5,7 +5,14 @@ namespace TDD.UI
 {
     public sealed class Form1ViewModel : INotifyPropertyChanged
     {
+        private IDB _db;
         private string _aTextBoxText = string.Empty;
+
+        public Form1ViewModel(IDB db)
+        {
+            _db = db;
+        }
+
         public string ATextBoxText
         {
             get { return _aTextBoxText; }
@@ -68,7 +75,7 @@ namespace TDD.UI
             int a = Convert.ToInt32(ATextBoxText);
             int b = Convert.ToInt32(BTextBoxText);
 
-            int dbValue = DB.GetDBValue();
+            int dbValue = _db.GetDBValue();
             ResultLabelText = (Calculation.Sum(a, b) + dbValue).ToString();
         }
     }

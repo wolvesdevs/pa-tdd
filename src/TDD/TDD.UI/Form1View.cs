@@ -12,7 +12,7 @@ namespace TDD.UI
 {
     public partial class Form1View : Form
     {
-        private Form1ViewModel _viewModel = new Form1ViewModel();
+        private Form1ViewModel _viewModel = new Form1ViewModel(new DB());
 
         public Form1View()
         {

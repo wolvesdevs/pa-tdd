@@ -1,8 +1,8 @@
 ﻿namespace TDD.UI
 {
-    public static class DB
+    public class DB : IDB
     {
-        public static int GetDBValue()
+        public int GetDBValue()
         {
             return 200;
         }

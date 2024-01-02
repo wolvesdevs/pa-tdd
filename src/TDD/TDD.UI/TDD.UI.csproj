@@ -55,6 +55,7 @@
       <DependentUpon>Form1View.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1ViewModel.cs" />
+    <Compile Include="IDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1View.resx">
