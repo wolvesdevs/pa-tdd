@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading;
 
 namespace TDD.UI
 {
@@ -116,6 +117,12 @@ namespace TDD.UI
             var p = _db.GetProduct();
             ProductIdTextBoxText = p.ProductId.ToString();
             ProductNameTextBoxText = p.ProductName;
+        }
+
+        public void Save()
+        {
+            var p = new Product(Convert.ToInt32(ProductIdTextBoxText), ProductNameTextBoxText);
+            _db.SaveProduct(p);
         }
     }
 }

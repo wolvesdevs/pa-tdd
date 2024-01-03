@@ -31,12 +31,24 @@ namespace TDDTest.Tests
         public void シナリオ2()
         {
             var mock = new Mock<IDB>();
-            var p = new Product(10, "p11");
+            var p = new Product(10, "p10");
             mock.Setup(x => x.GetProduct()).Returns(p);
             var viewModel = new Form1ViewModel(mock.Object);
             viewModel.ProductCommand();
             viewModel.ProductIdTextBoxText.Is("10");
             viewModel.ProductNameTextBoxText.Is("p10");
+
+            viewModel.ProductNameTextBoxText = "pro10";
+
+            mock.Setup(x => x.SaveProduct(It.IsAny<Product>())).
+                Callback<Product>(saveValue =>
+                {
+                    saveValue.ProductId.Is(10);
+                    saveValue.ProductName.Is("pro10");
+                });
+
+            viewModel.Save();
+            mock.VerifyAll();
         }
     }
 }
