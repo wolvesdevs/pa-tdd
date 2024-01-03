@@ -3,5 +3,6 @@
     public interface IDB
     {
         int GetDBValue();
+        Product GetProduct();
     }
 }

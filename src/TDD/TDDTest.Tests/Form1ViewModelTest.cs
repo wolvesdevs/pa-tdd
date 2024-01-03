@@ -26,5 +26,17 @@ namespace TDDTest.Tests
 
             Assert.AreEqual("107", viewModel.ResultLabelText);
         }
+
+        [TestMethod]
+        public void シナリオ2()
+        {
+            var mock = new Mock<IDB>();
+            var p = new Product(10, "p11");
+            mock.Setup(x => x.GetProduct()).Returns(p);
+            var viewModel = new Form1ViewModel(mock.Object);
+            viewModel.ProductCommand();
+            viewModel.ProductIdTextBoxText.Is("10");
+            viewModel.ProductNameTextBoxText.Is("p10");
+        }
     }
 }

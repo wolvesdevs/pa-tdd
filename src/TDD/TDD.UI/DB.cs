@@ -6,5 +6,10 @@
         {
             return 200;
         }
+
+        public Product GetProduct()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
