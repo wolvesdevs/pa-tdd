@@ -2,14 +2,24 @@
 {
     public class Class1
     {
-        public static int Add(int a, int b)
+        public static int CallA(int a, int b)
         {
             return a + b;
         }
 
-        public static int Add2(int a, int b, int c)
+        public static int CallB(int a, int b)
         {
-            return a + b + c;
+            if (a == 0)
+            {
+                return 1;
+            }
+
+            return a + b;
+        }
+
+        public static int CallC(int a, int b)
+        {
+            return a - b;
         }
     }
 }
